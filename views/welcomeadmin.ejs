@@ -47,6 +47,7 @@
     <table class = "table text-center">
         <thead>
             <tr>
+                <th>Student Photo</th>
                 <th>Roll No</th>
                 <th>Name</th>
                 <th>Father Name</th>
@@ -57,7 +58,9 @@
         </thead>
         <tbody>
             <%  students.forEach((student)=>{  %>
-               <tr> <td> <%= student.RollNo %></td>
+               <tr> 
+                <td><image src = "<%= student.StudentImage %> " width = "50px" height="50px" ></image></td>
+                <td> <%= student.RollNo %></td>
                 <td><%= student.Name %></td>
                 <td><%= student.FatherName %></td>
                 <td><%= student.Course %></td>
