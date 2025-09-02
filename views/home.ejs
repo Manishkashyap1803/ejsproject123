@@ -1,0 +1,48 @@
+<%- include('./base/header.ejs') %>
+<style>
+    .login-container {
+        margin-top: 20px;
+    }
+    .login-form {
+        background-color: #f8f9fa; /* Light background for the form */
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .login-image {
+        max-width: 100%; /* Ensure the image is responsive */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 5px; /* Optional: round the corners of the image */
+    }
+</style>
+<div class="container">
+    <div class="alert text-center bg-success my-3" style="color:white">
+        <h4>Login Form</h4>
+    </div>
+</div>
+<div class="container login-container">
+    <div class="row align-items-center"> <!-- Added align-items-center for vertical centering -->
+        <div class="col">
+            <form action="/login" method="post" class="login-form">
+                <div>
+                    <label class="form-label">Email</label>
+                    <input type="text" class="form-control" name="Email" required>
+                    <div>
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" name="Password" required>
+                        <div>
+                            <input type="submit" value="Login" class="btn btn-warning w-100 my-3">
+                            <div>
+                                <a href="/user/signup" class="btn btn-danger w-100 my-3">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col d-flex justify-content-center"> <!-- Added d-flex and justify-content-center -->
+            <img src="/images.jpeg" alt="Description of Image" class="img-fluid login-image">
+        </div>
+    </div>
+</div>
+<%- include('./base/footer.ejs') %>
